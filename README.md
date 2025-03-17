@@ -23,7 +23,7 @@ A common utility library for JavaScript applications.
 
 ## History
 
-The name comes from the fictional Warcraft universe's _Tanaris_ region, known
+The name comes from the fictional _Warcraft_ universe's _Tanaris_ region, known
 for its _Caverns of Time_, home to a flight of bronze dragons blessed with
 temporal magic whose purpose is to safeguard time from those who wish to
 rewrite it — an allusion to the nature of writing the same utilities again and
