@@ -6,6 +6,9 @@ A common utility library for JavaScript applications.
 >
 > _Tanaris_ is **experimental software**. It is provided "as is", without
 > warranty of any kind; use at your own risk.
+>
+> There is no near-term plan for API backwards compatibility. Please pin to an
+> exact version or commit and perform manual upgrades.
 
 > This library is home to common code for software applications developed by
 > its authors. It only includes the _smallest_ set of utilities that its client
