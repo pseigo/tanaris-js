@@ -23,34 +23,49 @@
 import globals from "globals";
 //import js from "@eslint/js";
 
+const baseLanguageOptions = {
+  sourceType: "module",
+  ecmaVersion: 2020,
+  parserOptions: {
+    ecmaFeatures: {
+      impliedStrict: true
+    }
+  }
+};
+
+const baseRules = {
+  "no-unused-vars": ["warn", {
+    "argsIgnorePattern": "^_",
+    "varsIgnorePattern": "^_"
+  }],
+  "no-undef": "warn",
+};
+
 export default [
   {
-    name: "tanaris",
+    name: "tanaris-config",
     files: [
       "*.config.{js,cjs}",
+    ],
+    languageOptions: {
+      ...baseLanguageOptions,
+      globals: {
+        ...globals.node
+      }
+    },
+    rules: {...baseRules}
+  },
+  {
+    name: "tanaris-src",
+    files: [
       "src/tanaris/**/*.{js,jsx,ts,tsx}"
     ],
     languageOptions: {
-      sourceType: "module",
-      ecmaVersion: 2020,
-      parserOptions: {
-        ecmaFeatures: {
-          impliedStrict: true,
-          jsx: true
-        }
-      },
+      ...baseLanguageOptions,
       globals: {
-        ...globals.browser
+        ...globals.browser,
       }
     },
-    plugins: {},
-    settings: {},
-    rules: {
-      "no-unused-vars": ["warn", {
-        "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "^_"
-      }],
-      "no-undef": "warn",
-    }
+    rules: {...baseRules}
   }
 ];
