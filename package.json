@@ -1,0 +1,30 @@
+{
+  "name": "tanaris",
+  "version": "0.0.1",
+  "description": "Common utility library. (experimental)",
+  "keywords": [
+    "stdlib", "util"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Peyton Seigo",
+    "url": "https://github.com/pseigo"
+  },
+  "homepage": "https://github.com/pseigo/tanaris-js#readme",
+  "bugs": {
+    "url": "https://github.com/pseigo/tanaris-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pseigo/tanaris-js"
+  },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"Error: no build specified\" && exit 1",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "format-check": "npx prettier src/tanaris --check",
+    "format": "npx prettier src/tanaris --write",
+    "check": "npx tsc --noEmit && npm run format-check"
+  }
+}
