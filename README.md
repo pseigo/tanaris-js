@@ -4,21 +4,22 @@ A common utility library for JavaScript applications.
 
 > [!WARNING]
 >
-> Tanaris is experimental software and not (yet) intended for general use.
->
+> _Tanaris_ is **experimental software**. It is provided "as is", without
+> warranty of any kind; use at your own risk.
+
 > This library is home to common code for software applications developed by
-> its authors. It (only) includes the smallest set of utilities that its client
+> its authors. It only includes the _smallest_ set of utilities that its client
 > applications have needed, nothing more.
 >
-> We are not taking feature requests at this time, but suggestions for
+> We are **_not_ taking feature requests** at this time, but suggestions for
 > improvements (within scope) are welcome and appreciated!
 >
 > In accordance with the license, you are free to study and derive from the
-> code for your own purposes.
+> source code for your own purposes.
 >
 > As the library matures and the domains it serves becomes clearer, we may
-> (someday) consider moving Tanaris in a direction towards being a standard
-> library for general use.
+> someday consider moving _Tanaris_ in a direction towards being a 'standard
+> library' of sorts for general use.
 
 ## History
 
