@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Common utility library. (experimental)",
   "keywords": [
-    "stdlib", "util"
+    "stdlib",
+    "util"
   ],
   "license": "MIT",
   "author": {
@@ -23,8 +24,15 @@
   "scripts": {
     "build": "echo \"Error: no build specified\" && exit 1",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "lint": "npx eslint",
     "format-check": "npx prettier src/tanaris --check",
     "format": "npx prettier src/tanaris --write",
-    "check": "npx tsc --noEmit && npm run format-check"
+    "check": "npx tsc --noEmit && npm run lint && npm run format-check"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "eslint": "^9.22.0",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3"
   }
 }
