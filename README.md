@@ -4,25 +4,31 @@ A common utility library for client-side JavaScript applications.
 
 > [!WARNING]
 >
-> _Tanaris_ is **experimental software**. It is provided "as is", without
-> warranty of any kind; use at your own risk.
->
-> There is no near-term plan for API backwards compatibility. Please pin to an
-> exact version or commit and perform manual upgrades.
+> _Tanaris_ is **experimental software** in its early stages. It is provided
+> "as is", without warranty of any kind; use at your own risk.
 
-> This library is home to common code for software applications developed by
-> its authors. It only includes the _smallest_ set of utilities that its client
-> applications have needed, nothing more.
+## Install
+
+```sh
+npm install --save-exact tanaris@alpha
+```
+
+[![tanaris on npm](https://img.shields.io/badge/npm-white?logo=npm&logoColor=ba271a)](https://www.npmjs.com/package/tanaris)
+
+> [!NOTE]
 >
-> We are **_not_ taking feature requests** at this time, but suggestions for
-> improvements (within scope) are welcome and appreciated!
->
-> In accordance with the license, you are free to study and derive from the
-> source code for your own purposes.
->
-> As the library matures and the domains it serves becomes clearer, we may
-> someday consider moving _Tanaris_ in a direction towards being a 'standard
-> library' of sorts for general use.
+> There is currently no plan for API backwards compatibility across versions.
+> For now the best experience is probably to pin to an exact version/commit
+> and perform manual upgrades.
+
+## Scope/roadmap
+
+This library is home to common code for software applications developed by its
+authors. It only includes the smallest set of utilities that its client
+applications have needed, nothing more.
+
+We are **not taking feature requests** at this time, but suggestions for
+improvements (within existing scope) are welcome and appreciated!
 
 ## History
 
