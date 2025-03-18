@@ -1,7 +1,7 @@
 {
   "name": "tanaris",
   "version": "0.0.1",
-  "description": "Common utility library. (experimental)",
+  "description": "Common utility library for client-side applications. (experimental)",
   "keywords": [
     "stdlib",
     "util"

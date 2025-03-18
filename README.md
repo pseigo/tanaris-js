@@ -1,6 +1,6 @@
 # Tanaris
 
-A common utility library for JavaScript applications.
+A common utility library for client-side JavaScript applications.
 
 > [!WARNING]
 >
