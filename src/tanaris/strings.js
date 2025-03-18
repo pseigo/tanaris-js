@@ -16,7 +16,7 @@ export function isString(value) {
  *
  * @example
  * ```js
- * import { capitalize } from "/wander/common/strings";
+ * import { capitalize } from "tanaris/strings";
  * console.log(capitalize("hello")); //=> "Hello"
  * console.log(capitalize(""));      //=> ""
  * ```

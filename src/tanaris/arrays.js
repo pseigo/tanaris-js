@@ -36,7 +36,7 @@ export function wrap(elementOrArray) {
  *
  * @example
  * ```js
- * import { intersperse } from "/wander/common/arrays";
+ * import { intersperse } from "tanaris/arrays";
  *
  * const nums = [1, 2, 3];
  * const interspersed = intersperse(nums, ", ");
