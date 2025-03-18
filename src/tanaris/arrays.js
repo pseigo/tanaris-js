@@ -1,6 +1,6 @@
 // Copyright (c) 2025 Peyton Seigo
 
-import { isString } from "/tanaris/strings";
+import { isString } from "./strings.js";
 
 /**
  * Returns `true` iff `value` is an array containing zero or more strings.
