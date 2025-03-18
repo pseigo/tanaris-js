@@ -1,27 +1,8 @@
-/*
- * Copyright (c) 2025 Peyton Seigo
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to
- * deal in the Software without restriction, including without limitation the
- * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
- * sell copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
- * IN THE SOFTWARE.
- */
+// Copyright (c) 2025 Peyton Seigo
 
 import globals from "globals";
 //import js from "@eslint/js";
+import jest from "eslint-plugin-jest";
 
 const baseLanguageOptions = {
   sourceType: "module",
@@ -58,7 +39,7 @@ export default [
   {
     name: "tanaris-src",
     files: [
-      "src/tanaris/**/*.{js,jsx,ts,tsx}"
+      "src/**/*.{js,ts}"
     ],
     languageOptions: {
       ...baseLanguageOptions,
@@ -67,5 +48,64 @@ export default [
       }
     },
     rules: {...baseRules}
+  },
+  {
+    name: "tanaris-test",
+    files: [
+      "test/**/*.{js,ts}"
+    ],
+    ignores: [],
+    languageOptions: {
+      ...baseLanguageOptions,
+      globals: {
+        ...globals.jest,
+        ...globals.node
+      }
+    },
+    plugins: {
+      jest
+    },
+    settings: {},
+    rules: {
+      ...baseRules,
+
+      // [start] Jest
+      // - see: https://github.com/jest-community/eslint-plugin-jest/blob/main/README.md#rules
+      // Recommended:
+      "jest/expect-expect": "warn",
+      "jest/no-alias-methods": "warn",
+      "jest/no-conditional-expect": "warn",
+      "jest/no-deprecated-functions": "warn",
+      "jest/no-disabled-tests": "warn",
+      "jest/no-focused-tests": "warn",
+      "jest/no-test-prefixes": "error",
+      "jest/no-done-callback": "error",
+      "jest/no-export": "error",
+      "jest/no-identical-title": "error",
+      "jest/no-interpolation-in-snapshots": "error",
+      "jest/no-jasmine-globals": "error",
+      "jest/no-mocks-import": "error",
+      "jest/no-standalone-expect": "error",
+      "jest/prefer-to-be": "warn",
+      "jest/prefer-to-contain": "warn",
+      "jest/prefer-to-have-length": "warn",
+      "jest/valid-describe-callback": "error",
+      "jest/valid-title": ["error", {ignoreTypeOfTestName: true}],
+      "jest/valid-expect": "error",
+      "jest/valid-expect-in-promise": "error",
+      // Our rules:
+      "jest/no-confusing-set-timeout": "warn",
+      "jest/no-duplicate-hooks": "warn",
+      "jest/no-test-return-statement": "error",
+      "jest/prefer-called-with": "warn",
+      "jest/prefer-comparison-matcher": "warn",
+      "jest/prefer-each": "warn",
+      "jest/prefer-equality-matcher": "warn",
+      "jest/prefer-expect-resolves": "warn",
+      "jest/prefer-mock-promise-shorthand": "warn",
+      "jest/prefer-strict-equal": "warn",
+      "jest/prefer-todo": "warn"
+      // [end] Jest
+    }
   }
 ];
