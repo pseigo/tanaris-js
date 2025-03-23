@@ -78,7 +78,7 @@ describe("calling `isStringArray/1`", () => {
     Symbol("bar"),
   ]);
 
-  describe("returns `true` for arrays with String elements", () => {
+  describe("on an Array only containing String elements returns `true`", () => {
     test.each(stringArrays)(
       tableTestName,
       (array) => {
@@ -88,7 +88,7 @@ describe("calling `isStringArray/1`", () => {
     );
   });
 
-  describe("returns `false` for arrays with non-String elements", () => {
+  describe("on an Array containing at least one non-String element returns `false`", () => {
     test.each(nonStringArrays)(
       tableTestName,
       (array) => {
@@ -98,7 +98,7 @@ describe("calling `isStringArray/1`", () => {
     );
   });
 
-  describe("returns `false` for non-arrays", () => {
+  describe("on a non-Array returns `false`", () => {
     test.each(nonArrays)(
       tableTestName,
       (value) => {
@@ -140,21 +140,21 @@ describe("calling `wrap/1`", () => {
     [[[]]],
   ]);
 
-  describe("wraps non-Arrays in an Array", () => {
-    test.each(nonArrays)(
+  describe("on an Array returns it as-is (like the 'identity' function)", () => {
+    test.each(arrays)(
       tableTestName,
-      (nonArray) => {
-        expect(wrap(nonArray)).toStrictEqual([nonArray]);
+      (array) => {
+        expect(wrap(array)).toStrictEqual(array);
       },
       testTimeoutMs
     );
   });
 
-  describe("returns Arrays as-is (like the 'identity' function)", () => {
-    test.each(arrays)(
+  describe("on a non-Array returns a 1-element Array containing that value", () => {
+    test.each(nonArrays)(
       tableTestName,
-      (array) => {
-        expect(wrap(array)).toStrictEqual(array);
+      (nonArray) => {
+        expect(wrap(nonArray)).toStrictEqual([nonArray]);
       },
       testTimeoutMs
     );
@@ -180,9 +180,9 @@ describe("calling `intersperse/2`", () => {
       expected: ["a", "", "b"]
     },
     {
-      array: ["a", "b"],
+      array: ["a", "b", "c"],
       element: ", ",
-      expected: ["a", ", ", "b"]
+      expected: ["a", ", ", "b", ", ", "c"]
     },
     {
       array: [123, { bar: 456 }, Infinity, []],
@@ -191,11 +191,15 @@ describe("calling `intersperse/2`", () => {
     },
   ]);
 
-  describe("inserts the given value between each Array element", () => {
+  describe("inserts a given value between each element in a shallow copy of the given Array", () => {
     test.each(argsWithExpectedResults)(
       tableTestName,
       ({ array, element, expected }) => {
         expect(intersperse(array, element)).toStrictEqual(expected);
+
+        array.forEach((originalElement) => {
+          expect(expected).toContainEqual(originalElement);
+        });
       },
       testTimeoutMs
     );

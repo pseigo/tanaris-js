@@ -11,6 +11,8 @@ describe("calling `isString/1`", () => {
     "",
     "a",
     "Abc",
+    "étude",
+    "Ö",
   ]);
 
   // prettier-ignore
@@ -32,7 +34,7 @@ describe("calling `isString/1`", () => {
     [],
   ]);
 
-  describe("returns `true` for Strings", () => {
+  describe("on a String returns `true`", () => {
     test.each(strings)(
       tableTestName,
       (str) => {
@@ -42,7 +44,7 @@ describe("calling `isString/1`", () => {
     );
   });
 
-  describe("returns `false` for non-Strings", () => {
+  describe("on a non-String returns `false`", () => {
     test.each(nonStrings)(
       tableTestName,
       (value) => {
@@ -53,7 +55,7 @@ describe("calling `isString/1`", () => {
   });
 });
 
-describe("calling `capitalize/1` uppercases the first character of the given String", () => {
+describe("calling `capitalize/1` on a String uppercases its first character", () => {
   // prettier-ignore
   const stringsAndExpectedResults = toTable([
     { str: "", expected: "" },
