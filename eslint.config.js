@@ -9,61 +9,58 @@ const baseLanguageOptions = {
   ecmaVersion: 2020,
   parserOptions: {
     ecmaFeatures: {
-      impliedStrict: true
-    }
-  }
+      impliedStrict: true,
+    },
+  },
 };
 
 const baseRules = {
-  "no-unused-vars": ["warn", {
-    "argsIgnorePattern": "^_",
-    "varsIgnorePattern": "^_"
-  }],
+  "no-unused-vars": [
+    "warn",
+    {
+      argsIgnorePattern: "^_",
+      varsIgnorePattern: "^_",
+    },
+  ],
   "no-undef": "warn",
 };
 
 export default [
   {
     name: "tanaris-config",
-    files: [
-      "*.config.{js,cjs}",
-    ],
+    files: ["*.config.{js,cjs}"],
     languageOptions: {
       ...baseLanguageOptions,
       globals: {
-        ...globals.node
-      }
+        ...globals.node,
+      },
     },
-    rules: {...baseRules}
+    rules: { ...baseRules },
   },
   {
     name: "tanaris-src",
-    files: [
-      "src/**/*.{js,ts}"
-    ],
+    files: ["src/**/*.{js,ts}"],
     languageOptions: {
       ...baseLanguageOptions,
       globals: {
         ...globals.browser,
-      }
+      },
     },
-    rules: {...baseRules}
+    rules: { ...baseRules },
   },
   {
     name: "tanaris-test",
-    files: [
-      "test/**/*.{js,ts}"
-    ],
+    files: ["test/**/*.{js,ts}"],
     ignores: [],
     languageOptions: {
       ...baseLanguageOptions,
       globals: {
         ...globals.jest,
-        ...globals.node
-      }
+        ...globals.node,
+      },
     },
     plugins: {
-      jest
+      jest,
     },
     settings: {},
     rules: {
@@ -90,7 +87,7 @@ export default [
       "jest/prefer-to-contain": "warn",
       "jest/prefer-to-have-length": "warn",
       "jest/valid-describe-callback": "error",
-      "jest/valid-title": ["error", {ignoreTypeOfTestName: true}],
+      "jest/valid-title": ["error", { ignoreTypeOfTestName: true }],
       "jest/valid-expect": "error",
       "jest/valid-expect-in-promise": "error",
       // Our rules:
@@ -104,8 +101,8 @@ export default [
       "jest/prefer-expect-resolves": "warn",
       "jest/prefer-mock-promise-shorthand": "warn",
       "jest/prefer-strict-equal": "warn",
-      "jest/prefer-todo": "warn"
+      "jest/prefer-todo": "warn",
       // [end] Jest
-    }
-  }
+    },
+  },
 ];
