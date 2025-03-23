@@ -1,4 +1,7 @@
-// Copyright (c) 2025 Peyton Seigo
+/*!
+ * tanaris-js: strings.js
+ * Copyright (c) 2025 Peyton Seigo
+ */
 
 /**
  * Returns `true` iff `value` is a string.

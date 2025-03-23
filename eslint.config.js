@@ -28,9 +28,10 @@ const baseRules = {
 export default [
   {
     name: "tanaris-config",
-    files: ["*.config.{js,cjs}"],
+    files: ["*.config.{cjs,js}", "scripts/**/*.{cjs,js}"],
     languageOptions: {
       ...baseLanguageOptions,
+      ecmaVersion: 2022, // for top-level `await` in esbuild scripts
       globals: {
         ...globals.node,
       },

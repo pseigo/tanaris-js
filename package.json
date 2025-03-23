@@ -22,21 +22,25 @@
   "type": "module",
   "main": "./src/index.js",
   "exports": {
-    ".": "./src/index.js",
-    "./arrays": "./src/tanaris/arrays.js",
-    "./strings": "./src/tanaris/strings.js"
+    ".": "./dist/index.js",
+    "./arrays": "./dist/tanaris/arrays.js",
+    "./strings": "./dist/tanaris/strings.js"
   },
   "scripts": {
-    "build": "echo \"Error: no build specified\" && exit 1",
+    "build": "node scripts/build.js",
+    "watch": "node scripts/watch.js",
+    "clean": "node -e \"fs.rmSync('dist', { recursive: true, force: true })\"",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "npx eslint",
-    "format-check": "npx prettier package.json *.config.cjs *.config.js tsconfig.json src test --check",
-    "format": "npx prettier package.json *.config.cjs *.config.js tsconfig.json src test --write",
-    "check": "npx tsc --noEmit && npm run lint && npm run format-check"
+    "format-check": "npx prettier *.config.cjs *.config.js package.json tsconfig.json scripts src test --check",
+    "format": "npx prettier *.config.cjs *.config.js package.json tsconfig.json scripts src test --write",
+    "check": "npx tsc --noEmit && npm run lint && npm run format-check",
+    "prepare": "npm run clean && npm run build"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@jest/globals": "^29.7.0",
+    "esbuild": "0.25.1",
     "eslint": "^9.22.0",
     "eslint-plugin-jest": "^28.11.0",
     "globals": "^16.0.0",

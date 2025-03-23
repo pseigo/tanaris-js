@@ -1,6 +1,9 @@
-// Copyright (c) 2025 Peyton Seigo
+/*!
+ * tanaris-js: arrays.js
+ * Copyright (c) 2025 Peyton Seigo
+ */
 
-import { isString } from "./strings.js";
+import { isString } from "/tanaris/strings.js";
 
 /**
  * Returns `true` iff `value` is an array containing zero or more strings.
