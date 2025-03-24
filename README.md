@@ -37,7 +37,8 @@ authors. It only includes the smallest set of utilities that its client
 applications have needed, nothing more.
 
 We are **not taking feature requests** at this time, but suggestions for
-improvements (within existing scope) are welcome and appreciated!
+improvements (within existing scope) and bug reports are welcome and
+appreciated!
 
 ## History
 
