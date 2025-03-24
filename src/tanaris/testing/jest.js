@@ -1,6 +1,8 @@
-// Copyright (c) 2025 Peyton Seigo
+/*!
+ * tanaris-js: testing/jest.js
+ * Copyright (c) 2025 Peyton Seigo
+ */
 
-// TODO: TypeScript type
 /**
  * A 2D array for use with Jest's table APIs.
  *
