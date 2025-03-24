@@ -15,6 +15,7 @@ export const buildContextOptions = {
   entryPoints: entryPoints,
   bundle: true,
   outdir: "dist",
+  format: "esm",
   target: "es2020",
   platform: "browser",
   legalComments: "eof",
