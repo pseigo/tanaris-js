@@ -22,6 +22,14 @@ npm install --save-exact tanaris@alpha
 > For now the best experience is probably to pin to an exact version/commit
 > and perform manual upgrades.
 
+## Upgrade
+
+Simply run `npm install` again with the version you wish to upgrade to.
+
+e.g., `npm install --save-exact tanaris@0.0.1-alpha.1` for that specific alpha
+release, or `npm install --save-exact tanaris@alpha` for the latest alpha
+release.
+
 ## Scope/roadmap
 
 This library is home to common code for software applications developed by its
