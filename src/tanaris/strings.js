@@ -24,16 +24,16 @@ export function isString(value) {
  * console.log(capitalize(""));      //=> ""
  * ```
  *
- * @param {String} str
+ * @param {string} str
  *
- * @returns {String}
+ * @returns {string}
  */
 export function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 /**
- * @returns {String}
+ * @returns {string}
  */
 export function randomLowerAlphaNumericString() {
   return Math.random().toString(36).slice(2);

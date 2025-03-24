@@ -22,7 +22,7 @@ export function isStringArray(value) {
  * @example `wrap(1) // => [1]`
  * @example `wrap([1]) // => [1]`
  *
- * @param {(Array | any)} elementOrArray
+ * @param {(Exclude<any, Array> | Array)} elementOrArray
  *
  * @returns {Array}
  */

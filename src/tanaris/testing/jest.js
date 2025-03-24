@@ -4,7 +4,7 @@
 /**
  * A 2D array for use with Jest's table APIs.
  *
- * @typedef {[[any]]} JestTable
+ * @typedef {any[][]} JestTable
  *
  * @see https://jestjs.io/docs/api#testeachtablename-fn-timeout
  * @see https://jestjs.io/docs/api#each
@@ -45,7 +45,7 @@ export const testTimeoutMs = 50;
  * @see https://jestjs.io/docs/api#testeachtablename-fn-timeout
  * @see https://jestjs.io/docs/api#each
  *
- * @param {[any]} xs
+ * @param {any[]} xs
  *
  * @returns {JestTable}
  */

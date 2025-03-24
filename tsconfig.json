@@ -1,7 +1,30 @@
 {
+  "include": ["src/**/*"],
+
   "compilerOptions": {
     "paths": {
       "/tanaris/*": ["./src/tanaris/*"]
-    }
+    },
+
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "target": "es2020",
+    "module": "es2020",
+    "moduleResolution": "bundler",
+
+    "rootDir": "src",
+    "outDir": "dist",
+    "listEmittedFiles": true,
+
+    "strictNullChecks": true
+  },
+
+  "watchOptions": {
+    "watchFile": "useFsEventsOnParentDirectory",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    "excludeDirectories": ["**/node_modules", "dist"]
   }
 }

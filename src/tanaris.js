@@ -21,5 +21,12 @@
  * SOFTWARE.
  */
 
-export * as Strings from "/tanaris/strings.js";
-export * as Arrays from "/tanaris/arrays.js";
+import * as Strings from "./tanaris/strings.js";
+import * as Arrays from "./tanaris/arrays.js";
+
+export { Arrays, Strings };
+
+export default {
+  Arrays,
+  Strings,
+};
