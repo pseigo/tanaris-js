@@ -35,6 +35,10 @@
       "types": "./dist/tanaris/strings.d.ts",
       "default": "./dist/tanaris/strings.js"
     },
+    "./testing": {
+      "types": "./dist/tanaris/testing.d.ts",
+      "default": "./dist/tanaris/testing.js"
+    },
     "./testing/jest": {
       "types": "./dist/tanaris/testing/jest.d.ts",
       "default": "./dist/tanaris/testing/jest.js"

@@ -4,7 +4,17 @@
  */
 
 /**
+ * Utilities for strings.
+ *
+ * @showCategories
+ *
+ * @module Strings
+ */
+
+/**
  * Returns `true` iff `value` is a string.
+ *
+ * @category Predicates
  *
  * @param {any} value
  *
@@ -24,6 +34,8 @@ export function isString(value) {
  * console.log(capitalize(""));      //=> ""
  * ```
  *
+ * @category Transformers
+ *
  * @param {string} str
  *
  * @returns {string}
@@ -33,6 +45,10 @@ export function capitalize(str) {
 }
 
 /**
+ * Generates a short, random, alphanumeric string.
+ *
+ * @category Generators
+ *
  * @returns {string}
  */
 export function randomLowerAlphaNumericString() {

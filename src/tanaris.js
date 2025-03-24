@@ -24,9 +24,24 @@
 import * as Strings from "./tanaris/strings.js";
 import * as Arrays from "./tanaris/arrays.js";
 
-export { Arrays, Strings };
+import * as Testing from "./tanaris/testing.js";
 
+export { Arrays, Strings, Testing };
+
+/**
+ * An aggregation of all Tanaris's top-level APIs, to support the style of
+ * fully-qualified function calls.
+ *
+ * @example
+ * ```js
+ * import Tanaris from "tanaris";
+ *
+ * console.log(Tanaris.Strings.isString("Hello, World!")) //=> true
+ * console.log(Tanaris.Arrays.isStringArray(["Hello", "World!"]) //=> true
+ * ```
+ */
 export default {
   Arrays,
   Strings,
+  Testing,
 };

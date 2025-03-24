@@ -4,21 +4,79 @@
  */
 
 /**
- * A 2D array for use with Jest's table APIs.
+ * Utilities for automated testing with Jest.
  *
- * @typedef {any[][]} JestTable
+ * @module Jest
+ *
+ * @see https://github.com/jestjs/jest
+ * @see https://jestjs.io/
+ */
+
+/**
+ * @typedef {any[][]} JestTable - A 2D array for use with Jest's table APIs.
+ * See {@link toTable} for more context.
  *
  * @see https://jestjs.io/docs/api#testeachtablename-fn-timeout
  * @see https://jestjs.io/docs/api#each
  */
 
+/**
+ * A standard name for Jest table test blocks. Looks best with input data that
+ * doesn't overflow to the next line when pretty-printed.
+ *
+ * @example
+ * ```js
+ * // test/tanaris/strings.test.js (excerpt)
+ *
+ * import { describe, test, expect } from "@jest/globals";
+ * import { tableTestName, testTimeoutMs, toTable } from "tanaris/testing/jest";
+ * import { capitalize } from "tanaris/strings";
+ *
+ * describe("calling `capitalize/1` on a String uppercases its first character", () => {
+ *   // prettier-ignore
+ *   const stringsAndExpectedResults = toTable([
+ *     { str: "", expected: "" },
+ *     { str: "a", expected: "A" },
+ *     { str: "hello", expected: "Hello" },
+ *   ]);
+ *
+ *   test.each(stringsAndExpectedResults)(
+ *     tableTestName,
+ *     ({ str, expected }) => {
+ *       expect(capitalize(str)).toBe(expected);
+ *     },
+ *     testTimeoutMs
+ *   );
+ * });
+ * ```
+ * ```txt
+ * $ npm run test
+ * PASS  test/tanaris/strings.test.js
+ *  calling `capitalize/1` on a String uppercases its first character
+ *    ✓ [0] { str: '', expected: '' }
+ *    ✓ [1] { str: 'a', expected: 'A' }
+ *    ✓ [2] { str: 'hello', expected: 'Hello' }
+ * ```
+ *
+ * @see https://jestjs.io/docs/api#testeachtablename-fn-timeout
+ */
 export const tableTestName = "[%#] %O";
+
+/**
+ * A standard timeout for Jest table tests. Jest's default is 5000ms (as of
+ * v29.7) which seems a bit long for most small unit tests, so this is a bit
+ * shorter.
+ *
+ * @see {@link tableTestName} for example usage.
+ * @see https://jestjs.io/docs/api#testeachtablename-fn-timeout
+ */
 export const testTimeoutMs = 50;
 
 /**
  * Encloses each element in `xs` in an array for passing into Jest's
  * `test.each`. If some `x` is already `[...]`, it will become `[[...]]`.
  *
+ * @remarks
  * ## Rationale
  *
  * From the Jest (v29.7) API docs for `test.each`:
@@ -44,6 +102,7 @@ export const testTimeoutMs = 50;
  * Consider using `toTable` any time you have a mix of arrays and non-arrays in
  * your `test.each` inputs for consistent behaviour from Jest.
  *
+ * @see {@link tableTestName} for example usage.
  * @see https://jestjs.io/docs/api#testeachtablename-fn-timeout
  * @see https://jestjs.io/docs/api#each
  *

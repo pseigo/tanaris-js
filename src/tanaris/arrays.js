@@ -3,10 +3,20 @@
  * Copyright (c) 2025 Peyton Seigo
  */
 
+/**
+ * Utilities for arrays.
+ *
+ * @showCategories
+ *
+ * @module Arrays
+ */
+
 import { isString } from "/tanaris/strings.js";
 
 /**
  * Returns `true` iff `value` is an array containing zero or more strings.
+ *
+ * @category Predicates
  *
  * @param {any} value
  *
@@ -21,6 +31,8 @@ export function isStringArray(value) {
  *
  * @example `wrap(1) // => [1]`
  * @example `wrap([1]) // => [1]`
+ *
+ * @category Transformers
  *
  * @param {(Exclude<any, Array> | Array)} elementOrArray
  *
@@ -48,6 +60,8 @@ export function wrap(elementOrArray) {
  * console.log(interspersed); //=> [1, ", ", 2, ", ", 3]
  * console.log(prettyStr);    //=> "1, 2, 3"
  * ```
+ *
+ * @category Transformers
  *
  * @param {Array} array
  * @param {any} withElement
