@@ -43,16 +43,18 @@
   "scripts": {
     "build": "node scripts/build.js",
     "gen-types": "npx tsc",
+    "gen-docs": "npx typedoc",
     "watch:build": "node scripts/watch_build.js",
     "watch:gen-types": "npx tsc --watch --preserveWatchOutput",
+    "watch:gen-docs": "npx typedoc --watch --preserveWatchOutput",
     "watch": "npx npm-run-all --parallel watch:**",
     "clean": "node -e \"fs.rmSync('dist', { recursive: true, force: true })\"",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "npx eslint",
-    "format-check": "npx prettier *.config.cjs *.config.js package.json tsconfig.json scripts src test --check",
-    "format": "npx prettier *.config.cjs *.config.js package.json tsconfig.json scripts src test --write",
+    "format-check": "npx prettier *.config.cjs *.config.js package.json tsconfig.json typedoc.json scripts src test --check",
+    "format": "npx prettier *.config.cjs *.config.js package.json tsconfig.json typedoc.json scripts src test --write",
     "check": "npx tsc --noEmit && npm run lint && npm run format-check",
-    "prepare": "npm run clean && npm run build && npm run gen-types",
+    "prepare": "npm run clean && npm run build && npm run gen-types && npm run gen-docs",
     "prepublishOnly": "npm run check && npm run test"
   },
   "devDependencies": {
@@ -66,6 +68,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "npm-run-all": "4.1.5",
     "prettier": "^3.5.3",
+    "typedoc": "^0.28.1",
     "typescript": "^5.8.2"
   }
 }

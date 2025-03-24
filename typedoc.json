@@ -1,0 +1,51 @@
+{
+  "entryPoints": ["src/tanaris.js"],
+  "entryPointStrategy": "resolve",
+
+  "name": "tanaris-js",
+  "includeVersion": true,
+  "readme": "README.md",
+
+  "excludeInternal": true,
+
+  "categoryOrder": ["Predicates", "Transformers", "Generators", "*"],
+
+  "outputs": [
+    {
+      "name": "html",
+      "path": "./docs",
+      "options": {
+        "basePath": "./src",
+        "cleanOutputDir": true,
+
+        "githubPages": true,
+        "hostedBaseUrl": "http://pseigo.github.io/tanaris-js",
+        "useHostedBaseUrlForAbsoluteLinks": false,
+
+        "router": "kind",
+        "sourceLinkExternal": true,
+        "markdownLinkExternal": true,
+        "lang": "en-CA",
+
+        "searchCategoryBoosts": {
+          "Transformers": 1.3
+        },
+
+        "customFooterHtml": "Copyright (c) 2025 Peyton Seigo",
+        "favicon": "./assets/images/favicons/favicon@32px.png",
+        "navigationLinks": {
+          "GitHub": "https://github.com/pseigo/tanaris-js",
+          "npm": "https://www.npmjs.com/package/tanaris"
+        },
+
+        "lightHighlightTheme": "github-light-high-contrast",
+        "darkHighlightTheme": "github-dark-high-contrast",
+        "markdownItOptions": {
+          "html": true,
+          "linkify": true,
+          "typographer": true
+        }
+      }
+    }
+  ]
+}
