@@ -17,6 +17,7 @@ npm install --save-exact tanaris@alpha
 
 [![pseigo/tanaris-js on GitHub](./assets/images/badges/shields-io-github-light.svg)](https://github.com/pseigo/tanaris-js)
 [![tanaris on npm](./assets/images/badges/shields-io-npm-light.svg)](https://www.npmjs.com/package/tanaris)
+[![API documentation](./assets/images/badges/shields-io-api-docs-light.svg)](https://pseigo.github.io/tanaris-js)
 
 > [!NOTE]
 >
