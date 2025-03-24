@@ -22,7 +22,7 @@
   "type": "module",
   "main": "./src/index.js",
   "exports": {
-    ".": "./dist/index.js",
+    ".": "./dist/tanaris.js",
     "./arrays": "./dist/tanaris/arrays.js",
     "./strings": "./dist/tanaris/strings.js"
   },

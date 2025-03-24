@@ -1,7 +1,7 @@
 // Copyright (c) 2025 Peyton Seigo
 
 const entryPoints = [
-  "src/index.js",
+  "src/tanaris.js",
   "src/tanaris/arrays.js",
   "src/tanaris/strings.js",
 ];
