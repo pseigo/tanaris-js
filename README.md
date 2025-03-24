@@ -13,8 +13,8 @@ A common utility library for client-side JavaScript applications.
 npm install --save-exact tanaris@alpha
 ```
 
-[![pseigo/tanaris-js on GitHub](https://img.shields.io/badge/GitHub-white?logo=github&logoColor=black)](https://github.com/pseigo/tanaris-js)
-[![tanaris on npm](https://img.shields.io/badge/npm-white?logo=npm&logoColor=ba271a)](https://www.npmjs.com/package/tanaris)
+[![pseigo/tanaris-js on GitHub](./assets/images/badges/shields-io-github-light.svg)](https://github.com/pseigo/tanaris-js)
+[![tanaris on npm](./assets/images/badges/shields-io-npm-light.svg)](https://www.npmjs.com/package/tanaris)
 
 > [!NOTE]
 >
