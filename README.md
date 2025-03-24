@@ -1,4 +1,6 @@
-# Tanaris
+<p align="center">
+  <img src="./assets/images/banners/banner.svg" width=55% alt="Tanaris">
+</p>
 
 A common utility library for client-side JavaScript applications.
 
