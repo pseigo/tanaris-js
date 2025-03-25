@@ -60,7 +60,7 @@
     "watch:gen-types": "npx tsc --watch --preserveWatchOutput",
     "watch:gen-docs": "npx typedoc --watch --preserveWatchOutput",
     "watch": "npx npm-run-all --parallel watch:**",
-    "clean": "node -e \"fs.rmSync('dist', { recursive: true, force: true })\"",
+    "clean": "node scripts/clean.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "npx eslint",
     "format-check": "npx prettier *.config.cjs *.config.js package.json tsconfig.json typedoc.json scripts src test --check",
