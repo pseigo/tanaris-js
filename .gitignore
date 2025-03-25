@@ -8,3 +8,7 @@ npm-debug.log
 
 # Test coverage artifacts
 .coverage
+
+# Exclude from distributed packages
+**/*.swp
+**/*.env
