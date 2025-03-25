@@ -44,6 +44,14 @@
       "default": "./dist/tanaris/testing/jest.js"
     }
   },
+  "files": [
+    "package.json",
+    "LICENSE",
+    "README.md",
+    "assets/images/badges",
+    "assets/images/banners",
+    "dist"
+  ],
   "scripts": {
     "build": "node scripts/build.js",
     "gen-types": "npx tsc",
