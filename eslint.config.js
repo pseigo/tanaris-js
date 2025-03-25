@@ -27,6 +27,9 @@ const baseRules = {
 
 export default [
   {
+    ignores: [".coverage", "dist", "docs"],
+  },
+  {
     name: "tanaris-config",
     files: ["*.config.{cjs,js}", "scripts/**/*.{cjs,js}"],
     languageOptions: {
