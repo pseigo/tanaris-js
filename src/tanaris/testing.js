@@ -9,7 +9,7 @@
  * @module Testing
  */
 
-import * as Jest from "./testing/jest";
+import * as Jest from "./testing/jest.js";
 
 export { Jest };
 
