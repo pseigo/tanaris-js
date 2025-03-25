@@ -25,6 +25,6 @@
     "watchFile": "useFsEventsOnParentDirectory",
     "watchDirectory": "useFsEvents",
     "fallbackPolling": "dynamicPriority",
-    "excludeDirectories": ["**/node_modules", "dist"]
+    "excludeDirectories": ["**/node_modules", "dist", "dist-scripts", "docs"]
   }
 }

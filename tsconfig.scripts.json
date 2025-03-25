@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+
+  "include": ["scripts/**/*"],
+
+  "compilerOptions": {
+    "noEmit": true,
+    "target": "es2022",
+    "module": "es2022",
+
+    "rootDir": "scripts",
+    "outDir": "dist-scripts",
+    "listEmittedFiles": true
+  }
+}

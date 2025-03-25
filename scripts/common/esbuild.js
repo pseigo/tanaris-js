@@ -12,6 +12,8 @@ const entryPoints = [
  * Options for esbuild's build APIs like `build/1`, `context/1`, etc.
  *
  * @see https://esbuild.github.io/api/#build
+ *
+ * @type {import("esbuild").BuildOptions}
  */
 export const buildContextOptions = {
   entryPoints: entryPoints,
