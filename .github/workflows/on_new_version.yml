@@ -5,11 +5,17 @@ on:
     tags:
       - v[0-9]*
 
-  # Allow running workflow manually from the Actions tab.
+  # Enable manual workflow execution from the Actions tab.
   workflow_dispatch:
+    inputs:
+      manual_tag:
+        description: "Name of the tag corresponding to this release. e.g., 'v0.0.1-alpha.1'"
+        required: true
+        type: string
 
 env:
-  VERSION: ${{ github.ref_name }}
+  ACTIONS_RUNNER_DEBUG: true
+  VERSION: ${{ inputs.manual_tag || github.ref_name }}
   ARTIFACTS_DIR: release-artifacts
 
 jobs:
@@ -23,6 +29,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ env.VERSION }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -32,36 +40,38 @@ jobs:
           check-latest: true
           cache: 'npm'
 
-      - name: Install npm dependencies
+      - name: Install npm dependencies and run 'prepare' script
         run: npm ci
-
-      - name: Run 'prepare' script
-        run: npm run prepare
 
       - name: Create build artifact archives
         run: |
-          PREFIX=tanaris-js_$VERSION
+          set -x
+          PREFIX="tanaris-js_$VERSION"
           DIST_FILES="package.json LICENSE README.md assets/images/badges assets/images/banners dist"
 
-          mkdir $ARTIFACTS_DIR
-          tar czf $ARTIFACTS_DIR/$PREFIX_dist.tar.gz $DIST_FILES
-          tar czf $ARTIFACTS_DIR/$PREFIX_dist-with-docs.tar.gz $DIST_FILES docs
-          git archive --format=tar.gz --output=$ARTIFACTS_DIR/$PREFIX_src.tar.gz $VERSION
+          mkdir "$ARTIFACTS_DIR"
+          tar czf "$ARTIFACTS_DIR/${PREFIX}_dist.tar.gz" $DIST_FILES
+          tar czf "$ARTIFACTS_DIR/${PREFIX}_dist-with-docs.tar.gz" $DIST_FILES docs
+          #git archive --format=tar.gz --output="$ARTIFACTS_DIR/${PREFIX}_src.tar.gz" $VERSION
+
+          echo "Artifact archives:"
+          ls -1 "$ARTIFACTS_DIR"
+          set +x
 
       - name: Upload build artifact archives
-        uses: action/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: build-artifacts-archives
-          retention-days: 60
+          retention-days: 7
           path: ${{ env.ARTIFACTS_DIR }}/*
-          compression-level: 1 # TODO: test file sizes and times to compress tar.gz archives from 0-9
+          compression-level: 1
           if-no-files-found: error
           overwrite: false
           include-hidden-files: false
 
       - name: Upload GitHub Pages artifact
         id: docs_deployment
-        uses: action/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3
         with:
           path: docs/
 
@@ -81,7 +91,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: docs_deployment
-        uses: action/deploy-pages@v4
+        uses: actions/deploy-pages@v4
 
   create_github_release:
     name: Create GitHub release
@@ -93,7 +103,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifacts archives
-        uses: action/download-artifact@v4
+        uses: actions/download-artifact@v4
         with:
           name: build-artifacts-archives
           path: ${{ env.ARTIFACTS_DIR }}/
@@ -104,5 +114,6 @@ jobs:
           files: ${{ env.ARTIFACTS_DIR }}/*
           preserve_order: true
           fail_on_unmatched_files: true
+          tag_name: ${{ env.VERSION }}
           prerelease: false
           make_latest: true
