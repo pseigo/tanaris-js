@@ -22,16 +22,18 @@ npm install --save-exact tanaris@alpha
 > [!NOTE]
 >
 > There is currently no plan for API backwards compatibility across versions.
-> For now the best experience is probably to pin to an exact version/commit
-> and perform manual upgrades.
+> For now the it's recommended to pin to an exact version/commit and perform
+> manual upgrades.
 
-## Upgrade
+### Upgrade
 
-Simply run `npm install` again with the version you wish to upgrade to.
+```
+# specific version
+npm install --save-exact tanaris@0.0.1-alpha.4
 
-e.g., `npm install --save-exact tanaris@0.0.1-alpha.1` for that specific alpha
-release, or `npm install --save-exact tanaris@alpha` for the latest alpha
-release.
+# latest alpha
+npm install --save-exact tanaris@alpha
+```
 
 ## Scope/roadmap
 
@@ -40,17 +42,15 @@ authors. It only includes the smallest set of utilities that its client
 applications have needed, nothing more.
 
 We are **not taking feature requests** at this time, but suggestions for
-improvements (within existing scope) and bug reports are welcome and
-appreciated!
+improvements within existing scope and bug reports are welcome and
+appreciated.
 
 ## History
 
 The name comes from the fictional _Warcraft_ universe's _Tanaris_ region, known
 for its _Caverns of Time_, home to a flight of bronze dragons blessed with
 temporal magic whose purpose is to safeguard time from those who wish to
-rewrite it — an allusion to the nature of writing the same utilities again and
-again, and ensuring that work lives on, beyond the lifetimes of the
-applications that needed them.
+rewrite it.
 
 ## License
 
