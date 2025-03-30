@@ -9,6 +9,10 @@
 
 A common utility library for client-side JavaScript applications.
 
+[![pseigo/tanaris-js on GitHub](./assets/images/badges/shields-io-github-light.svg)][github]
+[![tanaris on npm](./assets/images/badges/shields-io-npm-light.svg)][npm]
+[![API documentation](./assets/images/badges/shields-io-api-docs-light.svg)][api-docs]
+
 > [!WARNING]
 >
 > - _Tanaris_ is **experimental alpha software**. The functionality and scope
@@ -19,7 +23,7 @@ A common utility library for client-side JavaScript applications.
 
 > [!NOTE]
 >
-> Alpha releases are provided on [GitHub][github-releases] and [npm][npm] for
+> Alpha builds are provided on [GitHub][github-releases] and [npm][npm] for
 > early testing.
 
 ## Install
@@ -32,10 +36,6 @@ A common utility library for client-side JavaScript applications.
 ```sh
 npm install --save-exact tanaris@alpha
 ```
-
-[![pseigo/tanaris-js on GitHub](./assets/images/badges/shields-io-github-light.svg)][github]
-[![tanaris on npm](./assets/images/badges/shields-io-npm-light.svg)][npm]
-[![API documentation](./assets/images/badges/shields-io-api-docs-light.svg)][api-docs]
 
 ### Upgrade
 
