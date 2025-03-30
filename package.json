@@ -22,6 +22,7 @@
   "type": "module",
   "main": "./dist/tanaris.js",
   "types": "./dist/tanaris.d.ts",
+  "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/tanaris.d.ts",
