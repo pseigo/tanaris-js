@@ -1,3 +1,8 @@
+[github]: https://github.com/pseigo/tanaris-js
+[github-releases]: https://github.com/pseigo/tanaris-js/releases
+[npm]: https://www.npmjs.com/package/tanaris
+[api-docs]: https://pseigo.github.io/tanaris-js
+
 <p align="center">
   <a href="https://github.com/pseigo/tanaris-js?tab=readme-ov-file#readme"><img src="./assets/images/banners/banner.svg" width=55% alt="Tanaris"></a>
 </p>
@@ -6,24 +11,31 @@ A common utility library for client-side JavaScript applications.
 
 > [!WARNING]
 >
-> _Tanaris_ is **experimental software** in its early stages. It is provided
-> "as is", without warranty of any kind; use at your own risk.
+> - _Tanaris_ is **experimental alpha software**. The functionality and scope
+>   of its APIs are still being developed alongside internal client
+>   applications.
+> - There is _currently no plan_ for **API backwards compatibility** across
+>   versions, in order to faciliate rapid alpha development.
+
+> [!NOTE]
+>
+> Alpha releases are provided on [GitHub][github-releases] and [npm][npm] for
+> early testing.
 
 ## Install
+
+> [!NOTE]
+>
+> It is recommended to pin to an exact version/commit and perform manual
+> upgrades.
 
 ```sh
 npm install --save-exact tanaris@alpha
 ```
 
-[![pseigo/tanaris-js on GitHub](./assets/images/badges/shields-io-github-light.svg)](https://github.com/pseigo/tanaris-js)
-[![tanaris on npm](./assets/images/badges/shields-io-npm-light.svg)](https://www.npmjs.com/package/tanaris)
-[![API documentation](./assets/images/badges/shields-io-api-docs-light.svg)](https://pseigo.github.io/tanaris-js)
-
-> [!NOTE]
->
-> There is currently no plan for API backwards compatibility across versions.
-> For now the it's recommended to pin to an exact version/commit and perform
-> manual upgrades.
+[![pseigo/tanaris-js on GitHub](./assets/images/badges/shields-io-github-light.svg)][github]
+[![tanaris on npm](./assets/images/badges/shields-io-npm-light.svg)][npm]
+[![API documentation](./assets/images/badges/shields-io-api-docs-light.svg)][api-docs]
 
 ### Upgrade
 
@@ -35,11 +47,7 @@ npm install --save-exact tanaris@0.0.1-alpha.4
 npm install --save-exact tanaris@alpha
 ```
 
-## Scope/roadmap
-
-This library is home to common code for software applications developed by its
-authors. It only includes the smallest set of utilities that its client
-applications have needed, nothing more.
+## Scope
 
 We are **not taking feature requests** at this time, but suggestions for
 improvements within existing scope and bug reports are welcome and
