@@ -1,6 +1,7 @@
 [github]: https://github.com/pseigo/tanaris-js
 [github-releases]: https://github.com/pseigo/tanaris-js/releases
 [npm]: https://www.npmjs.com/package/tanaris
+[npm-versions]: https://www.npmjs.com/package/tanaris?activeTab=versions
 [api-docs]: https://pseigo.github.io/tanaris-js
 
 <p align="center">
@@ -26,7 +27,7 @@ A common utility library for client-side JavaScript applications.
 > Alpha builds are provided on [GitHub][github-releases] and [npm][npm] for
 > early testing.
 
-## Install
+## Install or Upgrade
 
 > [!NOTE]
 >
@@ -34,18 +35,15 @@ A common utility library for client-side JavaScript applications.
 > upgrades.
 
 ```sh
-npm install --save-exact tanaris@alpha
-```
-
-### Upgrade
-
-```
-# specific version
-npm install --save-exact tanaris@0.0.1-alpha.4
-
 # latest alpha
 npm install --save-exact tanaris@alpha
+
+# or a specific version
+npm install --save-exact tanaris@0.0.1-alpha.4
 ```
+
+[![GitHub Releases for pseigo/tanaris-js](./assets/images/badges/shields-io-github-releases-light.svg)][github-releases]
+[![npm Versions for tanaris](./assets/images/badges/shields-io-npm-versions-light.svg)][npm-versions]
 
 ## Scope
 

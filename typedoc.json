@@ -34,8 +34,8 @@
         "customFooterHtml": "Copyright (c) 2025 Peyton Seigo",
         "favicon": "./assets/images/favicons/favicon@32px.png",
         "navigationLinks": {
-          "GitHub": "https://github.com/pseigo/tanaris-js",
-          "npm": "https://www.npmjs.com/package/tanaris"
+          "npm": "https://www.npmjs.com/package/tanaris",
+          "GitHub": "https://github.com/pseigo/tanaris-js"
         },
 
         "lightHighlightTheme": "github-light-high-contrast",
