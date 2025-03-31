@@ -22,17 +22,15 @@ A common utility library for client-side JavaScript applications.
 > - There is _currently no plan_ for **API backwards compatibility** across
 >   versions, in order to faciliate rapid alpha development.
 
-> [!NOTE]
->
-> Alpha builds are provided on [GitHub][github-releases] and [npm][npm] for
-> early testing.
+> _Alpha builds are provided on [GitHub][github-releases] and [npm][npm] for
+> early testing._
 
 ## Install or Upgrade
 
-> [!NOTE]
+> [!IMPORTANT]
 >
 > It is recommended to pin to an exact version/commit and perform manual
-> upgrades.
+> upgrades. (_Changelogs coming soon..._)
 
 ```sh
 # latest alpha
