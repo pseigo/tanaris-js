@@ -21,12 +21,13 @@
  * SOFTWARE.
  */
 
+import * as Numbers from "./tanaris/numbers.js";
 import * as Strings from "./tanaris/strings.js";
 import * as Arrays from "./tanaris/arrays.js";
 
 import * as Testing from "./tanaris/testing.js";
 
-export { Arrays, Strings, Testing };
+export { Arrays, Numbers, Strings, Testing };
 
 /**
  * An aggregation of all Tanaris's top-level APIs, to support the style of
@@ -42,6 +43,7 @@ export { Arrays, Strings, Testing };
  */
 export default {
   Arrays,
+  Numbers,
   Strings,
   Testing,
 };

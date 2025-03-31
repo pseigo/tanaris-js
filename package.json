@@ -32,6 +32,10 @@
       "types": "./dist/tanaris/arrays.d.ts",
       "default": "./dist/tanaris/arrays.js"
     },
+    "./numbers": {
+      "types": "./dist/tanaris/numbers.d.ts",
+      "default": "./dist/tanaris/numbers.js"
+    },
     "./strings": {
       "types": "./dist/tanaris/strings.d.ts",
       "default": "./dist/tanaris/strings.js"
