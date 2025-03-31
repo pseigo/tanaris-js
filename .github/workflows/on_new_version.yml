@@ -109,7 +109,7 @@ jobs:
           path: ${{ env.ARTIFACTS_DIR }}/
 
       - name: Create release
-        uses: softprops/action-gh-release@v2
+        uses: pseigo/github-actions-release@v2
         with:
           files: ${{ env.ARTIFACTS_DIR }}/*
           preserve_order: true
