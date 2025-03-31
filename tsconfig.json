@@ -10,6 +10,7 @@
     "checkJs": true,
     "declaration": true,
     "emitDeclarationOnly": true,
+    "lib": ["esnext", "dom"],
     "target": "es2020",
     "module": "es2020",
     "moduleResolution": "bundler",
