@@ -5,10 +5,14 @@ import { exit } from "node:process";
 
 const logPrefix = "[tanaris-js][scripts/clean.js]";
 
-/** @type {string[]} */
-const pathsToDelete = filterInvalidPaths(["dist", "docs"]);
+clean();
 
-cleanPaths(pathsToDelete);
+function clean() {
+  /** @type {string[]} */
+  const pathsToDelete = filterInvalidPaths(["dist", "docs"]);
+
+  cleanPaths(pathsToDelete);
+}
 
 /**
  * Returns a copy of `paths` without any that (a) don't exist, (b) the user
