@@ -23,11 +23,12 @@
 
 import * as Numbers from "./tanaris/numbers.js";
 import * as Strings from "./tanaris/strings.js";
+import * as Objects from "./tanaris/objects.js";
 import * as Arrays from "./tanaris/arrays.js";
 
 import * as Testing from "./tanaris/testing.js";
 
-export { Arrays, Numbers, Strings, Testing };
+export { Arrays, Numbers, Objects, Strings, Testing };
 
 /**
  * An aggregation of all Tanaris's top-level APIs, to support the style of
@@ -44,6 +45,7 @@ export { Arrays, Numbers, Strings, Testing };
 export default {
   Arrays,
   Numbers,
+  Objects,
   Strings,
   Testing,
 };
