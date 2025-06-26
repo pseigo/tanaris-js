@@ -69,6 +69,8 @@
     "watch:gen-types": "npx tsc --watch --preserveWatchOutput",
     "watch:gen-docs": "npx typedoc --watch --preserveWatchOutput",
     "watch": "npx npm-run-all --parallel watch:**",
+    "dev-docs-server-python": "env python3 -m http.server 8262",
+    "dev-docs-server": "npx npm-run-all --parallel watch:gen-docs dev-docs-server-python",
     "clean": "node scripts/clean.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "npx eslint",
