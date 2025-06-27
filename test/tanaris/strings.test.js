@@ -2,8 +2,14 @@
 
 import { describe, test, expect } from "@jest/globals";
 
-import { isString, capitalize } from "/tanaris/strings";
 import { tableTestName, testTimeoutMs, toTable } from "/tanaris/testing/jest";
+
+import { exclusiveRange } from "/tanaris/ranges";
+import {
+  capitalize,
+  isString,
+  randomLowerAlphaNumericString,
+} from "/tanaris/strings";
 
 describe("calling `isString/1`", () => {
   // prettier-ignore
@@ -73,6 +79,26 @@ describe("calling `capitalize/1` on a String uppercases its first character", ()
     tableTestName,
     ({ str, expected }) => {
       expect(capitalize(str)).toBe(expected);
+    },
+    testTimeoutMs
+  );
+});
+
+// prettier-ignore
+const randomLowerAlphaNumericStrings = toTable(
+  exclusiveRange(0, 9)
+    .map((_) => randomLowerAlphaNumericString())
+    .toArray()
+);
+
+describe("calling `randomLowerAlphaNumericString/0` returns a lowercase alphanumeric String", () => {
+  test.each(randomLowerAlphaNumericStrings)(
+    tableTestName,
+    (str) => {
+      expect(isString(str)).toBe(true);
+
+      const pattern = /^([a-z]|[0-9])+$/g;
+      expect(pattern.test(str)).toBe(true);
     },
     testTimeoutMs
   );
