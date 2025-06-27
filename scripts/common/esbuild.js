@@ -4,6 +4,7 @@ const entryPoints = [
   "src/tanaris.js",
   "src/tanaris/arrays.js",
   "src/tanaris/date_times.js",
+  "src/tanaris/elements.js",
   "src/tanaris/numbers.js",
   "src/tanaris/objects.js",
   "src/tanaris/ranges.js",

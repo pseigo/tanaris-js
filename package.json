@@ -36,6 +36,10 @@
       "types": "./dist/tanaris/date_times.d.ts",
       "default": "./dist/tanaris/date_times.js"
     },
+    "./elements": {
+      "types": "./dist/tanaris/elements.d.ts",
+      "default": "./dist/tanaris/elements.js"
+    },
     "./numbers": {
       "types": "./dist/tanaris/numbers.d.ts",
       "default": "./dist/tanaris/numbers.js"
