@@ -11,6 +11,8 @@
  * @module Strings
  */
 
+import * as MarkdownTable from "./strings/markdown_table.js";
+
 /**
  * Returns `true` iff `value` is a string.
  *
@@ -54,3 +56,13 @@ export function capitalize(str) {
 export function randomLowerAlphaNumericString() {
   return Math.random().toString(36).slice(2);
 }
+
+export { MarkdownTable };
+
+export default {
+  isString,
+  capitalize,
+  randomLowerAlphaNumericString,
+
+  MarkdownTable,
+};

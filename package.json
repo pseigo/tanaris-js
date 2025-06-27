@@ -52,6 +52,10 @@
       "types": "./dist/tanaris/strings.d.ts",
       "default": "./dist/tanaris/strings.js"
     },
+    "./strings/markdown_table": {
+      "types": "./dist/tanaris/strings/markdown_table.d.ts",
+      "default": "./dist/tanaris/strings/markdown_table.js"
+    },
     "./testing": {
       "types": "./dist/tanaris/testing.d.ts",
       "default": "./dist/tanaris/testing.js"

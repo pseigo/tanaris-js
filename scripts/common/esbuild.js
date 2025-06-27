@@ -8,6 +8,7 @@ const entryPoints = [
   "src/tanaris/objects.js",
   "src/tanaris/ranges.js",
   "src/tanaris/strings.js",
+  "src/tanaris/strings/markdown_table.js",
   "src/tanaris/testing.js",
   "src/tanaris/testing/jest.js",
 ];
