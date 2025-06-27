@@ -27,10 +27,13 @@ import * as Objects from "./tanaris/objects.js";
 import * as Arrays from "./tanaris/arrays.js";
 import * as Ranges from "./tanaris/ranges.js";
 
+import * as DateTimes from "./tanaris/date_times.js";
+
 import * as Testing from "./tanaris/testing.js";
 
 export {
   Arrays,
+  DateTimes,
   Numbers,
   Objects,
   Ranges,
@@ -52,6 +55,7 @@ export {
  */
 export default {
   Arrays,
+  DateTimes,
   Numbers,
   Objects,
   Ranges,

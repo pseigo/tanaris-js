@@ -32,6 +32,10 @@
       "types": "./dist/tanaris/arrays.d.ts",
       "default": "./dist/tanaris/arrays.js"
     },
+    "./date_times": {
+      "types": "./dist/tanaris/date_times.d.ts",
+      "default": "./dist/tanaris/date_times.js"
+    },
     "./numbers": {
       "types": "./dist/tanaris/numbers.d.ts",
       "default": "./dist/tanaris/numbers.js"
