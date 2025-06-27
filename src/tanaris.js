@@ -25,10 +25,18 @@ import * as Numbers from "./tanaris/numbers.js";
 import * as Strings from "./tanaris/strings.js";
 import * as Objects from "./tanaris/objects.js";
 import * as Arrays from "./tanaris/arrays.js";
+import * as Ranges from "./tanaris/ranges.js";
 
 import * as Testing from "./tanaris/testing.js";
 
-export { Arrays, Numbers, Objects, Strings, Testing };
+export {
+  Arrays,
+  Numbers,
+  Objects,
+  Ranges,
+  Strings,
+  Testing,
+};
 
 /**
  * An aggregation of all Tanaris's top-level APIs, to support the style of
@@ -46,6 +54,7 @@ export default {
   Arrays,
   Numbers,
   Objects,
+  Ranges,
   Strings,
   Testing,
 };

@@ -40,6 +40,10 @@
       "types": "./dist/tanaris/objects.d.ts",
       "default": "./dist/tanaris/objects.js"
     },
+    "./ranges": {
+      "types": "./dist/tanaris/ranges.d.ts",
+      "default": "./dist/tanaris/ranges.js"
+    },
     "./strings": {
       "types": "./dist/tanaris/strings.d.ts",
       "default": "./dist/tanaris/strings.js"

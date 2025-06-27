@@ -5,6 +5,7 @@ const entryPoints = [
   "src/tanaris/arrays.js",
   "src/tanaris/numbers.js",
   "src/tanaris/objects.js",
+  "src/tanaris/ranges.js",
   "src/tanaris/strings.js",
   "src/tanaris/testing.js",
   "src/tanaris/testing/jest.js",
