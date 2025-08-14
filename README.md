@@ -20,7 +20,7 @@ A common utility library for client-side JavaScript applications.
 >   of its APIs are still being developed alongside internal client
 >   applications.
 > - There is _currently no plan_ for **API backwards compatibility** across
->   versions, in order to faciliate rapid alpha development.
+>   versions, in order to facilitate rapid alpha development.
 
 > _Alpha builds are provided on [GitHub][github-releases] and [npm][npm] for
 > early testing._
